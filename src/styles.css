@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(
+    111.5deg,
+    rgb(228, 247, 255) 21.9%,
+    rgb(255, 216, 194) 92.2%
+  );
+  font-family: "Roboto", sans-serif;
+}
+.wrapper {
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+}
