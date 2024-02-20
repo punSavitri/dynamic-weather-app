@@ -1,9 +1,5 @@
 body {
-  background: linear-gradient(
-    111.5deg,
-    rgb(228, 247, 255) 21.9%,
-    rgb(255, 216, 194) 92.2%
-  );
+  background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   font-family: "Roboto", sans-serif;
 }
 /* header section styling */
