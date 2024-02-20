@@ -15,11 +15,12 @@
     <div class="wrapper">
       <!-- header section start-->
       <header>
-        <form action="" class="search-form">
+        <form action="" class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter your city name..."
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
@@ -29,7 +30,9 @@
       <main>
         <div class="current-weather-details">
           <div>
-            <h1 class="current-weather-city">London</h1>
+            <h1 class="current-weather-city" id="current-weather-city">
+              London
+            </h1>
             <p class="current-weather-info">
               Tuesday 15:00, Windy <br />
               Humidity:<strong>78%</strong> Wind: <strong>19mp/h</strong>
