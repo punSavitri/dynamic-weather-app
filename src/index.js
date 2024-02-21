@@ -10,6 +10,7 @@ function updateCityTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
+  let iconElement = document.querySelector("#current-weather-icon");
 
 
   //inject into HTML page
@@ -24,6 +25,8 @@ function updateCityTemperature(response) {
   humidityElement.innerHTML = `${humidity}%`;
   let windSpeed = response.data.wind.speed;
   windElement.innerHTML = `${windSpeed}km/h`;
+  let icon = response.data.condition.icon_url;
+  iconElement.innerHTML = `<img src="${icon}" class="current-weather-icon">`;
 
 }
 
