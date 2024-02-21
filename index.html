@@ -32,12 +32,11 @@
       <main>
         <div class="current-weather-details">
           <div>
-            <h1 class="current-weather-city" id="current-weather-city">
-              London
-            </h1>
+            <h1 class="current-weather-city" id="current-weather-city"></h1>
             <p class="current-weather-info">
-              Tuesday 15:00, Windy <br />
-              Humidity:<strong>78%</strong> Wind: <strong>19mp/h</strong>
+              <span id="time"></span>, <span id="description"></span><br />
+              Humidity:<strong id="humidity"></strong> Wind:
+              <strong id="wind-speed"></strong>
             </p>
           </div>
           <div class="current-weather-status">
@@ -45,9 +44,7 @@
             <div
               class="current-weather-temperature-value"
               id="current-weather-temperature-value"
-            >
-              12
-            </div>
+            ></div>
             <div class="current-weather-unit">°C</div>
           </div>
         </div>

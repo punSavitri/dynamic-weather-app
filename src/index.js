@@ -1,15 +1,45 @@
 //console.log("hello testing....");
 function updateCityTemperature(response) {
-  // console.log(response);
+  console.log(response.data);
   //console.log(response.data.temperature.current);
+
+  //assigning variables to DOM elements
   let currentTemperatureElement = document.querySelector("#current-weather-temperature-value");
+  let cityElement = document.querySelector("#current-weather-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+
+
+  //inject into HTML page
   let temperature = response.data.temperature.current;
   currentTemperatureElement.innerHTML = Math.round(temperature);
-
-  let cityElement = document.querySelector("#current-weather-city");
   cityElement.innerHTML = response.data.city;
+  let date = new Date(response.data.time * 1000);
+  timeElement.innerHTML = formatedDate(date);
+  let description = response.data.condition.description;
+  descriptionElement.innerHTML = description;
+  let humidity = response.data.temperature.humidity;
+  humidityElement.innerHTML = `${humidity}%`;
+  let windSpeed = response.data.wind.speed;
+  windElement.innerHTML = `${windSpeed}km/h`;
 
+}
 
+function formatedDate(date) {
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  let day = days[date.getDay()];
+
+  let hour = date.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hour}:${minutes}`;
 }
 function searchCity(city) {
 
@@ -37,3 +67,4 @@ function handleSearchSubmit(event) {
 let searchForm = document.querySelector("#search-form");
 // console.log(searchForm);
 searchForm.addEventListener("submit", handleSearchSubmit);
+searchCity("London");
